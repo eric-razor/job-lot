@@ -1,0 +1,8 @@
+<h1>JobApps#show</h1>
+
+  <h1 id='jobApp'><%= @jobapp.job_description %></h1> <br>
+
+
+<form id='addAppForm' method="post">
+  <input type="submit" id="submit" data-job='<%= params[:job_id] %>' data-jobapp='<%= params[:id] %>' data-applicant='<%= @jobapp.applicant_id %>' value="Add to My Applications">
+</form>

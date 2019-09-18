@@ -1,0 +1,16 @@
+<h1>Applicant#new</h1>
+<p>Find me in app/views/applicant/new.html.erb</p>
+
+
+<!-- need a form for will need id  -->
+<!-- ÷can build rails form -->
+<!-- submit btn  => trigger ajax call-->
+<h1><marquee> Creare un nuovo candidato! </marquee></h1>
+
+<%= form_for :applicant, url: applicants_path do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: 'Name' %>
+
+
+  <%= f.submit :submit %>
+<% end %>
