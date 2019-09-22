@@ -2,7 +2,6 @@ class JobAppsController < ApplicationController
 
   def index
     @jobapps = JobApp.find_by(params[:id])
-    # byebug
     respond_to do |format|
       format.html
       format.json { render json: @jobapps }
@@ -17,17 +16,6 @@ class JobAppsController < ApplicationController
   def new
     @jobapp = new JobApp(jobapp)
 
-  end
-
-  def create
-  end
-
-  def edit
-    #code
-  end
-
-  def update
-    #code
   end
 
 

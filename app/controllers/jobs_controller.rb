@@ -5,7 +5,6 @@ class JobsController < ApplicationController
       format.html
       format.json { render json: @jobs }
     end
-    # respond_to responds to the request
   end
 
   def show
@@ -14,9 +13,5 @@ class JobsController < ApplicationController
       format.html
       format.json { render json: @job }
     end
-  end
-
-  def update
-
   end
 end

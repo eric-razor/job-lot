@@ -22,19 +22,8 @@ class ApplicantsController < ApplicationController
     redirect_to applicants_path
   end
 
-  def edit
-  end
-
-  def update
-  end
-
   private
-
   def applicant_params
     params.require(:applicant).permit(:name)
   end
-
-  # def job_params
-  #   params.require(:jobapp).permit(:job_description, job_apps_attributes[:job_description])
-  # end
 end
