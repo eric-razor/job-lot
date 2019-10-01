@@ -13,7 +13,7 @@ class ApplicantsController < ApplicationController
 
   def new
     @applicant = Applicant.new
-    @applicant.job_apps
+    # @applicant.job_apps
   end
 
   def create

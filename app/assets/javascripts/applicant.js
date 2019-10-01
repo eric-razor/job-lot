@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){ 
-  getAllApplicantJobs()
-  postNewApplicant()
+  // getAllApplicantJobs()
+  // postNewApplicant()
 })
 
 class Applicant {
@@ -19,9 +19,8 @@ class Applicant {
   }
 }
 
-function postNewApplicant(){
-  cosnt submitButton = document.getElementById('submit')
-  submitButton.addEventListener('click', function(e)
-  })
-
-}
+// function postNewApplicant(){
+//   const submitButton = document.getElementById('submit')
+//   submitButton.addEventListener('click', function(e) {
+//
+//   })

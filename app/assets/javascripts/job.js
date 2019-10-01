@@ -10,7 +10,7 @@ class Job {
 
   linkToJobApps(){
     return `
-    <a href="/jobs/${this.id}/job_apps/">Job Name: ${this.name}</a><br>
+    <a href="/jobs/${this.id}/job_apps/">Company name: ${this.name}</a><br>
     `
   }
 }
