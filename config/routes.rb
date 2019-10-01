@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  # resources :job_listings, only: [:index, :show]
   root 'jobs#index'
-  resources :applicants do
-    resources :job_apps
+  resources :applicants , only: [:index,:show, :new, :create] do
+    resources :job_apps, only: [:index,:show]
   end
   resources :jobs, only: [:index, :show] do
-    resources :job_apps
+    resources :job_apps, only: [:index, :show]
   end
 end
