@@ -44,4 +44,6 @@ function loadJobsDiv(){
     })
   })
 
+  // what I should do with new applicant
+
 };

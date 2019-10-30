@@ -1,4 +1,5 @@
 class ApplicantsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
     @allApplicants = Applicant.all
     respond_to do |format|
@@ -13,13 +14,15 @@ class ApplicantsController < ApplicationController
 
   def new
     @applicant = Applicant.new
-    # @applicant.job_apps
   end
 
   def create
     @applicant = Applicant.create(applicant_params)
-    flash[:notice] = "Applicant: #{@applicant.name}, has been successfully created"
-    redirect_to applicants_path
+    respond_to do |format|
+      format.html
+      format.json { render json: @applicant}
+    end
+
   end
 
   def edit

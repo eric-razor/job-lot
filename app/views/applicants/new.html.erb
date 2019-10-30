@@ -7,8 +7,13 @@
 <!-- submit btn  => trigger ajax call-->
 <h1>Create a new applicant</h1>
 
-<%= form_for :applicant, url: applicants_path do |f| %>
+<!-- cant have rails form for a javascript post -->
+
+<%= form_for @applicant, html: {id: "applicant_name"} do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name, placeholder: 'Name' %>
+  <%= f.text_field :name %>
   <%= f.submit :submit %>
 <% end %>
+
+<br>
+<div id="new_applicant_name"> </div>
