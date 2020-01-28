@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){ 
   loadJobsDiv()
-  // postJobApp()
 })
 
 class JobApp{
@@ -11,26 +10,12 @@ class JobApp{
     this.applicantId = jobAppAttrs.applicant_id
   }
 
-
   linkHTML(){
     return `
   <a href="/jobs/${this.jobId}/job_apps/${this.id}"> description: ${this.jobDescription}</a><br>
     `
   }
 }
-
-
-// function postJobApp(){
-//   const addBtn = document.getElementById('submit')
-//   // const jobapp = document.getElementById('jobApp')
-//   addBtn.addEventListener('click', function(e){
-//     e.preventDefault()
-//     const applicantId = addBtn.getAttribute('data-applicant')
-//     const jobId = addBtn.getAttribute('data-job')
-//     const jobappId = addBtn.getAttribute('data-jobapp')
-//
-//   })
-// }
 
 function loadJobsDiv(){
   const allJobsDiv = document.getElementById('job_apps')
@@ -43,7 +28,4 @@ function loadJobsDiv(){
       allJobsDiv.innerHTML += app.linkHTML()
     })
   })
-
-  // what I should do with new applicant
-
 };

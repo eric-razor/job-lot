@@ -26,14 +26,6 @@ class Applicant {
   }
 }
 
-//be able to target your submit button
-//such that when clicked, it triggers your js function.
-//once it does, write an ajax post req to appropriate route
-//and test that it is hitting your create action.
-//once it is IS hitting create, you'll make it return JSON
-//which you can test by console logging the response of your
-//ajax post request here in your js function
-
 function postNewApplicant(name){
   const applicant_form = document.getElementById("applicant_name")
   const nameDiv = document.getElementById("new_applicant_name")
@@ -56,5 +48,3 @@ function postNewApplicant(name){
     })
   })
 }
-
-// .then(resp => resp.json()).then(resp => nameDiv.innerHTML += resp.name + " has been created")
